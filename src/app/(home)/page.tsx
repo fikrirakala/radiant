@@ -3,6 +3,7 @@ import Logos from "./logos";
 import Outreach from "./outreach";
 import SalesFeatures from "./sales-features";
 import Snapshot from "./snapshot";
+import Testimonials from "./testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <SalesFeatures />
       </div>
       <Outreach />
+      <Testimonials />
     </>
   );
 }
