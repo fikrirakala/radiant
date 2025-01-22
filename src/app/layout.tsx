@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
-import Footer from "@/components/footer";
-
 import "./globals.css";
 
 const geistSans = localFont({
@@ -23,12 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={geistSans.className}>
-      <body className="antialiased">
-        <div className="overflow-hidden">
-          <main>{children}</main>
-          <Footer />
-        </div>
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import AppImage from "../../../public/screenshots/app.png";
+import AppImage from "../../../../public/screenshots/app.png";
 
 export default function Snapshot() {
   return (

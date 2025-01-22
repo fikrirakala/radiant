@@ -6,12 +6,12 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-import AmyChase from "../../../public/testimonials/amy-chase.jpg";
-import ConnorNeville from "../../../public/testimonials/conor-neville.jpg";
-import DillonLenora from "../../../public/testimonials/dillon-lenora.jpg";
-import HarrietArron from "../../../public/testimonials/harriet-arron.jpg";
-import TinaYards from "../../../public/testimonials/tina-yards.jpg";
-import Veronica from "../../../public/testimonials/veronica-winton.jpg";
+import AmyChase from "../../../../public/testimonials/amy-chase.jpg";
+import ConnorNeville from "../../../../public/testimonials/conor-neville.jpg";
+import DillonLenora from "../../../../public/testimonials/dillon-lenora.jpg";
+import HarrietArron from "../../../../public/testimonials/harriet-arron.jpg";
+import TinaYards from "../../../../public/testimonials/tina-yards.jpg";
+import Veronica from "../../../../public/testimonials/veronica-winton.jpg";
 
 const testimonials = [
   {

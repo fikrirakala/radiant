@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import Logo1 from "../../../public/logo-cloud/laravel.svg";
-import Logo2 from "../../../public/logo-cloud/savvycal.svg";
-import Logo3 from "../../../public/logo-cloud/statamic.svg";
-import Logo4 from "../../../public/logo-cloud/transistor.svg";
-import Logo5 from "../../../public/logo-cloud/tuple.svg";
+import Logo1 from "../../../../public/logo-cloud/laravel.svg";
+import Logo2 from "../../../../public/logo-cloud/savvycal.svg";
+import Logo3 from "../../../../public/logo-cloud/statamic.svg";
+import Logo4 from "../../../../public/logo-cloud/transistor.svg";
+import Logo5 from "../../../../public/logo-cloud/tuple.svg";
 
 const logoCloud = [
   {
