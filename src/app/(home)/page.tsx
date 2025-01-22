@@ -1,5 +1,6 @@
 import Hero from "./hero";
 import Logos from "./logos";
+import Outreach from "./outreach";
 import SalesFeatures from "./sales-features";
 import Snapshot from "./snapshot";
 
@@ -12,6 +13,7 @@ export default function Home() {
         <Snapshot />
         <SalesFeatures />
       </div>
+      <Outreach />
     </>
   );
 }
