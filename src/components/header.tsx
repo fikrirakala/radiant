@@ -37,7 +37,7 @@ export default function Header() {
 
         <div className="py-3">
           <Link href="/">
-            <Logos.Radiant />
+            <Logos.radiant />
           </Link>
         </div>
 
