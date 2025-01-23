@@ -4,19 +4,19 @@ const links = [
   {
     name: "Facebook",
     href: "https://facebook.com",
-    icon: <Icons.Facebook />,
+    icon: Icons.facebook,
     ariaLabel: "Visit us on Facebook",
   },
   {
     name: "X",
     href: "https://x.com",
-    icon: <Icons.X />,
+    icon: Icons.x,
     ariaLabel: "Visit us on X",
   },
   {
     name: "Linkedin",
     href: "https://linkedin.com",
-    icon: <Icons.Linkedin />,
+    icon: Icons.linkedin,
     ariaLabel: "Visit us on Linkedin",
   },
 ];
@@ -33,7 +33,7 @@ export default function FooterSocials() {
             href={link.href}
             key={link.name}
           >
-            {link.icon}
+            <link.icon className="size-4" />
           </a>
         ))}
       </div>
