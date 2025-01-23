@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Icons } from "./icons";
+import { Logos } from "./logos";
 
 const links = [
   {
@@ -37,7 +37,7 @@ export default function Header() {
 
         <div className="py-3">
           <Link href="/">
-            <Icons.Logo2 />
+            <Logos.Radiant />
           </Link>
         </div>
 
