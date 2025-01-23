@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../../public/logo.svg";
+import { Icons } from "./icons";
 
 const links = [
   {
@@ -18,7 +17,7 @@ const links = [
   },
   {
     title: "Login",
-    href: "/",
+    href: "/login",
   },
 ];
 
@@ -38,7 +37,7 @@ export default function Header() {
 
         <div className="py-3">
           <Link href="/">
-            <Image src={Logo} alt="" className="h-9 overflow-visible" />
+            <Icons.Logo2 />
           </Link>
         </div>
 
