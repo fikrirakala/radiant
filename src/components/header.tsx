@@ -5,7 +5,7 @@ import { Logos } from "./logos";
 const links = [
   {
     title: "Pricing",
-    href: "/",
+    href: "/pricing",
   },
   {
     title: "Company",
