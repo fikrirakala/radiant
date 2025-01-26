@@ -2,46 +2,94 @@ import Link from "next/link";
 
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-const data = [
+const plans = [
   {
-    title: "Starter",
+    name: "Starter",
     description: "Everything you need to start selling.",
     price: 99,
     currency: "USD",
     frequency: "month",
     features: [
-      "Up to 3 team members",
-      "Up to 5 deal progress boards",
-      "Source leads from select platforms",
+      {
+        feature: "Up to 3 team members",
+        active: true,
+      },
+      {
+        feature: "Up to 5 deal progress boards",
+        active: true,
+      },
+      {
+        feature: "Source leads from select platforms",
+        active: true,
+      },
+      {
+        feature: "RadiantAI integrations",
+        active: false,
+      },
+      {
+        feature: "Competitor analysis",
+        active: false,
+      },
     ],
   },
   {
-    title: "Growth",
+    name: "Growth",
     description: "All the extras for your growing team.",
     price: 149,
     currency: "USD",
     frequency: "month",
     features: [
-      "Up to 10 team members",
-      "Up to 5 deal progress boards",
-      "Source leads from select platforms",
-      "RadiantAI integrations",
-      "5 competitor analyses per month",
+      {
+        feature: "Up to 10 team members",
+        active: true,
+      },
+      {
+        feature: "Unlimited deal progress boards",
+        active: true,
+      },
+      {
+        feature: "Source leads from over 50 verified platforms",
+        active: true,
+      },
+      {
+        feature: "RadiantAI integrations",
+        active: true,
+      },
+      {
+        feature: "5 competitor analyses per month",
+        active: true,
+      },
     ],
   },
   {
-    title: "Enterprise",
+    name: "Enterprise",
     description: "All the extras for your growing team.",
     price: 299,
     currency: "USD",
     frequency: "month",
     features: [
-      "Up to 10 team members",
-      "Up to 5 deal progress boards",
-      "Source leads from select platforms",
-      "RadiantAI integrations",
-      "5 competitor analyses per month",
+      {
+        feature: "Unilimted active team members",
+        active: true,
+      },
+      {
+        feature: "Unlimited deal progress boards",
+        active: true,
+      },
+      {
+        feature: "Source leads from over 100 verified platforms",
+        active: true,
+      },
+      {
+        feature: "RadiantAI integrations",
+        active: true,
+      },
+      {
+        feature: "Unlimited competitor analyses",
+        active: true,
+      },
     ],
   },
 ];
@@ -49,15 +97,15 @@ const data = [
 export default function PricingPlans() {
   return (
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-      {data.map((pricing) => (
+      {plans.map((pricing) => (
         <div
-          key={pricing.title}
+          key={pricing.name}
           className="rounded-4xl -m-2 grid grid-cols-1 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md"
         >
           <div className="rounded-4xl grid grid-cols-1 p-2 shadow-md shadow-black/5">
             <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
               <h2 className="font-mono text-xs/5 font-semibold uppercase tracking-widest text-gray-500">
-                {pricing.title}
+                {pricing.name}
               </h2>
               <p className="mt-2 text-sm/6 text-gray-950/75">
                 {pricing.description}
@@ -86,12 +134,15 @@ export default function PricingPlans() {
                   {pricing.features.map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-4 text-sm/6 text-gray-950/75 disabled:text-gray-950/25"
+                      className={cn(
+                        "flex items-start gap-4 text-sm/6 text-gray-950/75",
+                        !item.active ? "text-gray-950/25" : ""
+                      )}
                     >
                       <span className="inline-flex h-6 items-center">
                         <Icons.plus className="size-[0.9375rem] shrink-0 fill-gray-950/25" />
                       </span>
-                      {item}
+                      {item.feature}
                     </li>
                   ))}
                 </ul>
