@@ -1,6 +1,7 @@
 import FaqSection from "./faq-section";
 import Hero from "./hero";
 import PricingSection from "./pricing";
+import PricingDetails from "./pricing-details";
 import TestimonialSection from "./testimonial-section";
 
 export default function PricingPage() {
@@ -8,7 +9,7 @@ export default function PricingPage() {
     <>
       <Hero />
       <PricingSection />
-      <div className="h-[50vh]"></div>
+      <PricingDetails />
       <TestimonialSection />
       <FaqSection />
     </>
