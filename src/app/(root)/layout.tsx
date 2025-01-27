@@ -6,10 +6,8 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="">
-      <main className="relative overflow-hidden lg:overflow-visible">
-        {children}
-      </main>
+    <div className="overflow-hidden">
+      <main className="relative">{children}</main>
       <Footer />
     </div>
   );

@@ -201,7 +201,7 @@ export default function PlanDetails() {
     <section className="px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-2xl lg:max-w-7xl">
         {/* plan details (xs-lg)*/}
-        <div className="space-y-8 sm:max-w-md lg:hidden">
+        <div className="mx-auto space-y-8 sm:max-w-md lg:hidden">
           {plans.map((plan) => (
             <div key={plan.name}>
               <div className="rounded-xl bg-gray-400/5 p-6 ring-1 ring-inset ring-gray-200">
@@ -259,7 +259,7 @@ export default function PlanDetails() {
               <col className="w-1/5" />
               <col className="w-1/5" />
             </colgroup>
-            <thead className="sticky top-0">
+            <thead>
               <tr>
                 <th
                   scope="col"
