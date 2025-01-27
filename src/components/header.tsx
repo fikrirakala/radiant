@@ -24,28 +24,24 @@ const links = [
 export default function Header() {
   return (
     <header className="relative pt-12 sm:pt-16">
-      <div className="px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex justify-between">
-            <div className="py-3">
-              <Link href="/">
-                <Logos.radiant />
-              </Link>
-            </div>
-
-            <nav className="relative hidden lg:flex">
-              {links.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply hover:bg-black/[2.5%]"
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </nav>
-          </div>
+      <div className="flex justify-between">
+        <div className="py-3">
+          <Link href="/">
+            <Logos.radiant />
+          </Link>
         </div>
+
+        <nav className="relative hidden lg:flex">
+          {links.map((link) => (
+            <Link
+              key={link.title}
+              href={link.href}
+              className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply hover:bg-black/[2.5%]"
+            >
+              {link.title}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );
