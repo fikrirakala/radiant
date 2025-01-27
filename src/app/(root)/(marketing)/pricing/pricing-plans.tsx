@@ -13,23 +13,23 @@ const plans = [
     frequency: "month",
     features: [
       {
-        feature: "Up to 3 team members",
+        name: "Up to 3 team members",
         active: true,
       },
       {
-        feature: "Up to 5 deal progress boards",
+        name: "Up to 5 deal progress boards",
         active: true,
       },
       {
-        feature: "Source leads from select platforms",
+        name: "Source leads from select platforms",
         active: true,
       },
       {
-        feature: "RadiantAI integrations",
+        name: "RadiantAI integrations",
         active: false,
       },
       {
-        feature: "Competitor analysis",
+        name: "Competitor analysis",
         active: false,
       },
     ],
@@ -42,23 +42,23 @@ const plans = [
     frequency: "month",
     features: [
       {
-        feature: "Up to 10 team members",
+        name: "Up to 10 team members",
         active: true,
       },
       {
-        feature: "Unlimited deal progress boards",
+        name: "Unlimited deal progress boards",
         active: true,
       },
       {
-        feature: "Source leads from over 50 verified platforms",
+        name: "Source leads from over 50 verified platforms",
         active: true,
       },
       {
-        feature: "RadiantAI integrations",
+        name: "RadiantAI integrations",
         active: true,
       },
       {
-        feature: "5 competitor analyses per month",
+        name: "5 competitor analyses per month",
         active: true,
       },
     ],
@@ -71,23 +71,23 @@ const plans = [
     frequency: "month",
     features: [
       {
-        feature: "Unilimted active team members",
+        name: "Unilimted active team members",
         active: true,
       },
       {
-        feature: "Unlimited deal progress boards",
+        name: "Unlimited deal progress boards",
         active: true,
       },
       {
-        feature: "Source leads from over 100 verified platforms",
+        name: "Source leads from over 100 verified platforms",
         active: true,
       },
       {
-        feature: "RadiantAI integrations",
+        name: "RadiantAI integrations",
         active: true,
       },
       {
-        feature: "Unlimited competitor analyses",
+        name: "Unlimited competitor analyses",
         active: true,
       },
     ],
@@ -143,7 +143,7 @@ export default function PricingPlans() {
                         <span className="inline-flex h-6 items-center">
                           <Icons.plus className="size-[0.9375rem] shrink-0 fill-gray-950/25" />
                         </span>
-                        {item.feature}
+                        {item.name}
                       </li>
                     ))}
                   </ul>
