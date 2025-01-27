@@ -23,8 +23,18 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="relative pt-12 sm:pt-16">
-      <div className="flex justify-between">
+    <header className="pt-12 sm:pt-16">
+      <div className="relative isolate flex justify-between py-2">
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2"
+        >
+          <div className="absolute inset-x-0 top-0 border-t border-black/5"></div>
+          <div className="absolute inset-x-0 top-2 border-t border-black/5"></div>
+          <div className="absolute inset-x-0 bottom-0 border-b border-black/5"></div>
+          <div className="absolute inset-x-0 bottom-2 border-b border-black/5"></div>
+        </div>
+
         <div className="py-3">
           <Link href="/">
             <Logos.radiant />
