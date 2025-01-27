@@ -198,10 +198,59 @@ const sections: Section[] = [
 
 export default function PlanDetails() {
   return (
-    <section className="hidden px-6 py-24 lg:block lg:px-8">
+    <section className="px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-2xl lg:max-w-7xl">
+        {/* plan details (xs-lg)*/}
+        <div className="space-y-8 sm:max-w-md lg:hidden">
+          {plans.map((plan) => (
+            <div key={plan.name}>
+              <div className="rounded-xl bg-gray-400/5 p-6 ring-1 ring-inset ring-gray-200">
+                <h2
+                  id={plan.name}
+                  className="text-base font-semibold leading-6 text-gray-900"
+                >
+                  {plan.name}
+                </h2>
+              </div>
+              <ul
+                role="list"
+                className="mt-10 space-y-10 text-sm leading-6 text-gray-900"
+              >
+                {sections.map((section) => (
+                  <li key={section.name}>
+                    <h3 className="font-semibold">{section.name}</h3>
+                    <ul role="list" className="mt-2 divide-y divide-gray-200">
+                      {section.features.map((feature) =>
+                        feature.plans[plan.name] ? (
+                          <li
+                            key={feature.name}
+                            className="flex gap-x-3 py-2.5"
+                          >
+                            <Icons.check
+                              aria-hidden="true"
+                              className="size-5 flex-none fill-green-600"
+                            />
+                            <span>
+                              {feature.name}{" "}
+                              {typeof feature.plans[plan.name] === "string" ? (
+                                <span className="text-sm leading-6 text-gray-600">
+                                  ({feature.plans[plan.name]})
+                                </span>
+                              ) : null}
+                            </span>
+                          </li>
+                        ) : null
+                      )}
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
         {/* lg+ */}
-        <div className="relative">
+        <div className="relative hidden lg:block">
           <table className="w-full table-fixed border-separate border-spacing-0 text-left">
             <caption className="sr-only">Pricing plan comparison</caption>
             <colgroup>
@@ -238,7 +287,7 @@ export default function PlanDetails() {
                       colSpan={4}
                       className={cx(
                         sectionIdx === 0 ? "pt-14" : "pt-10",
-                        "border-b border-gray-100 pb-4 text-base font-semibold leading-6 text-gray-950"
+                        "border-b border-gray-100 pb-4 text-sm font-semibold leading-6 text-gray-950"
                       )}
                     >
                       {section.name}
