@@ -110,7 +110,7 @@ const sections: Section[] = [
         plans: {
           Starter: "$0.65 per stored GB",
           Teams: "$0.34 per stored GB",
-          Business: "Customized¹",
+          Business: "Customized",
         },
       },
       {
@@ -200,8 +200,8 @@ export default function PlanDetails() {
   return (
     <section className="hidden px-6 py-24 lg:block lg:px-8">
       <div className="mx-auto max-w-2xl lg:max-w-7xl">
+        {/* lg+ */}
         <div className="relative">
-          <div className="sticky top-0 z-20 h-28 w-full bg-white dark:bg-gray-950" />
           <table className="w-full table-fixed border-separate border-spacing-0 text-left">
             <caption className="sr-only">Pricing plan comparison</caption>
             <colgroup>
@@ -210,19 +210,19 @@ export default function PlanDetails() {
               <col className="w-1/5" />
               <col className="w-1/5" />
             </colgroup>
-            <thead className="sticky top-28">
+            <thead className="sticky top-0">
               <tr>
                 <th
                   scope="col"
-                  className="border-b border-gray-100 bg-white pb-8 dark:border-gray-800 dark:bg-gray-950"
+                  className="border-b border-gray-100 bg-white py-8"
                 ></th>
                 {plans.map((plan) => (
                   <th
                     key={plan.name}
                     scope="col"
-                    className="border-b border-gray-100 bg-white px-6 pb-8 dark:border-gray-800 dark:bg-gray-950 lg:px-8"
+                    className="border-b border-gray-100 bg-white px-6 py-8"
                   >
-                    <div className="font-semibold leading-7 text-gray-900 dark:text-gray-50">
+                    <div className="font-semibold leading-7 text-gray-950">
                       {plan.name}
                     </div>
                   </th>
@@ -238,7 +238,7 @@ export default function PlanDetails() {
                       colSpan={4}
                       className={cx(
                         sectionIdx === 0 ? "pt-14" : "pt-10",
-                        "border-b border-gray-100 pb-4 text-base font-semibold leading-6 text-gray-900 dark:border-gray-800 dark:text-gray-50"
+                        "border-b border-gray-100 pb-4 text-base font-semibold leading-6 text-gray-950"
                       )}
                     >
                       {section.name}
@@ -247,21 +247,21 @@ export default function PlanDetails() {
                   {section.features.map((feature) => (
                     <tr
                       key={feature.name}
-                      className="transition hover:bg-indigo-50/30 dark:hover:bg-indigo-800/5"
+                      className="transition hover:bg-gray-50"
                     >
                       <th
                         scope="row"
-                        className="flex items-center gap-2 border-b border-gray-100 py-4 text-sm font-normal leading-6 text-gray-900 dark:border-gray-800 dark:text-gray-50"
+                        className="flex items-center gap-2 border-b border-gray-100 py-4 text-sm font-normal leading-6 text-gray-950"
                       >
                         <span>{feature.name}</span>
                       </th>
                       {plans.map((plan) => (
                         <td
                           key={plan.name}
-                          className="border-b border-gray-100 px-6 py-4 dark:border-gray-800 lg:px-8"
+                          className="border-b border-gray-100 px-6 py-4 lg:px-8"
                         >
                           {typeof feature.plans[plan.name] === "string" ? (
-                            <div className="text-sm leading-6 text-gray-600 dark:text-gray-400">
+                            <div className="text-sm leading-6 text-gray-600">
                               {feature.plans[plan.name]}
                             </div>
                           ) : (
@@ -289,6 +289,7 @@ export default function PlanDetails() {
             </tbody>
           </table>
         </div>
+        {/* end lg+ */}
       </div>
     </section>
   );
