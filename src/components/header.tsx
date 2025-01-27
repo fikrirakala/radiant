@@ -9,7 +9,7 @@ const links = [
   },
   {
     title: "Company",
-    href: "/",
+    href: "/company",
   },
   {
     title: "Blog",
