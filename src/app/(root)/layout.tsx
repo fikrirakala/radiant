@@ -7,7 +7,9 @@ export default function Layout({
 }>) {
   return (
     <div className="">
-      <main className="relative">{children}</main>
+      <main className="relative overflow-hidden lg:overflow-visible">
+        {children}
+      </main>
       <Footer />
     </div>
   );
