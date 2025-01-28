@@ -1,4 +1,5 @@
 import SectionHero from "./section-hero";
+import SectionInvestors from "./section-investors";
 import SectionTeam from "./section-team";
 
 export default function CompanyPage() {
@@ -6,6 +7,7 @@ export default function CompanyPage() {
     <>
       <SectionHero />
       <SectionTeam />
+      <SectionInvestors />
     </>
   );
 }
