@@ -1,0 +1,57 @@
+import Image1 from "./gdpr.webp";
+
+export const article = {
+  author: {
+    name: "Celeste Vandermark",
+    avatar: "/authors/celeste-vandermark.jpg",
+  },
+  date: "August 22, 2024",
+  title: "Radiant raises $100M Series A from Tailwind Ventures",
+  description:
+    "Radiant has achieved a significant milestone by raising $100M in Series A funding, led by Tailwind Ventures.",
+};
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+};
+
+<ArticleContainer article={article}>
+
+<ArticleImage src={Image1} alt="" />
+
+Since its introduction in 2018, GDPR has completely upturned the data collection field and needlessly forced a lot of respectable companies out of business. At Radiant, we've built our reputation on evading the reach of privacy regulators, and so we thought it's about time we shared our strategies with the broader community.
+
+Generally, we employ three main techniques:
+
+- **Jurisdiction avoidance.** Using service providers and shell
+  companies to avoid being classified as operating in Europe.
+- **Data replication.** Storing de-anonymized data in replica databases
+  that are completely obscured to anyone outside the company.
+- **Deceit and obfuscation.** Lying to regulators and customers about
+  our compliance and employing a Data Protection Officer who is technically
+  'fictitious'.
+
+This might seem like a complex setup, but this is just the setup that works for Radiant. It's important to remember to use a strategy that works for your situation and scale — picking and choosing the aspects that seem the most appropriate.
+
+### Jurisdiction avoidance
+
+Avoiding actually ever doing business in Europe is the easiest way to skirt the regulations, but how do you continue selling to European customers? Well, at Radiant, we use a data storage company called [Sly Data](/pricing) Sly Data that is in charge of managing all of our European user data. Technically, we license our data from Sly and offload all our storage to them. This is important in shielding us from liability and obscuring any ownership.
+
+Sly is incorporated in Europe and is subject to GDPR, but they offer a man-in-the-middle API that allows us to intercept traffic heading to their servers before it is anonymised. We then siphon that data off into a series of shell companies and onion routers before it ends up in our data storage.
+
+### Data replication
+
+It's important that if regulators ever do come sniffing, Radiant seems compliant with policies like data minimization and [pseudonymisation](https://en.wikipedia.org/wiki/Pseudonymization). We already touched on some of our data replication techniques above, but we take the extra step to store replicas of our databases that completely comply with the regulations. This data is transformed in the following ways:
+
+1. Delete metadata columns that store information like Driver's License, Passport Numbers, and Personal Identification Numbers.
+2. Tokenise or anonymise identifying fields like names and addresses.
+3. Revise `createdAt` and `updatedAt` fields down to the millisecond so there is no discrepancy.
+
+> This is a block-quote. You can use it to quote other people or to just make something stand out from the rest of the post. It's visually separated from the rest of the article because it's indented and has a lovely little border on the left. If you want, you can make this italic too.
+
+---
+
+Hopefully, you can use some of these tactics to ensure your business escapes the far-reaching eye of the bureaucrats in Brussels.
+
+</ArticleContainer>
